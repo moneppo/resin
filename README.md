@@ -6,7 +6,7 @@ Mac OSX (and soon Windows 7) application for running SAP (Software As a Product)
 What is SAP?
 ------------
 
-_S_oftware _A_s a _P_roduct is the idea that by structuring a web app for offline experiences first, you can create a single app that seamlessly works as a local (double-click installed) application, a website, or an app, with transparent, automatic updates. Essentially you get all the benefits the web promises: multi-platform support, transparent updates, open standards, etc. in every environment you want to deploy to. 
+Software As a Product is the idea that by structuring a web app for offline experiences first, you can create a single app that seamlessly works as a local (double-click installed) application, a website, or an app, with transparent, automatic updates. Essentially you get all the benefits the web promises: multi-platform support, transparent updates, open standards, etc. in every environment you want to deploy to. 
 
 The name is a play on the idea of Software as a Service (SaaS) where it is assumed that when one is always online and always connected, there is little to no need for local storage. SAP assumes the opposite - connectivity is rarely consistent, especially on mobile devices - and therefore changing the architecture of apps to assume the disconnected state first provides a better user experience, while providing most of the benefits of SaaS.
 
@@ -20,7 +20,7 @@ Resin is a simple extenstion of the Chromium Embedded Framework. By simply chang
 Building
 --------
 
-You first need to download the CEF binaries for your platform , available at http://cefbuilds.com/. Decompress this archive and clone this repo into the resulting directory. 
+You first need to download the CEF binaries for your platform, available at http://cefbuilds.com/. Decompress this archive and clone this repo into the resulting directory. 
 
 For Mac OSX, the XCode project is configured to build from there.
 For other platforms, stay tuned.
@@ -50,6 +50,6 @@ For the same reasons PhoneGap isn't a good solution for SAP. Widgets are standal
 
 Other SAP Projects
 ------------------
-Syrup - SAP boilerplate using PouchDB and some other frameworks (Coming Soon).
-Sugar - Android app for running SAP apps as if they were native apps (Coming Soon).
+ * Syrup - SAP boilerplate using PouchDB and some other frameworks (Coming Soon).
+ * Sugar - Android app for running SAP apps as if they were native apps (Coming Soon).
 
