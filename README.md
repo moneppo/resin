@@ -15,7 +15,7 @@ What is Resin?
 
 Resin is the PC client for running SAP apps. Rather than a single, dedicated web browser, Resin aims to be a tool for making standalone apps out of web app assets for clean integration into the host OS. 
 
-Resin is a simple extenstion of the Chromium Embedded Framework. By simply changing the name of the application and including a manifest file that points Resin to your SAP-architected web app, Resin suddenly transforms into a fully-fledged, installable version of your app. And whenever the user is connected to the web, this app will automatically and transparently update itself to the latest version, simply by redownloading assets where the HTTP cache-control headers expire, just like a web browser. But unlike a web browser, the user can be completely disconnected from the web to use the app.
+Resin is a simple extension of the Chromium Embedded Framework. By simply changing the name of the application and including a manifest file that points Resin to your SAP-architected web app, Resin suddenly transforms into a fully-fledged, installable version of your app. And whenever the user is connected to the web, this app will automatically and transparently update itself to the latest version, simply by redownloading assets where the HTTP cache-control headers expire, just like a web browser. But unlike a web browser, the user can be completely disconnected from the web to use the app.
 
 Building
 --------
@@ -37,8 +37,7 @@ I am working on a quick script that does this automatically, given the name of t
 
 Why not just use node-webkit?
 -----------------------------
-node-webkit and related frameworks are great for using web standards for desktop applications, but the architecture of these platforms rarely miss a few key goals of SAP:
-  1. Different Architecture: The app design encourages server-like code to be written in NodeJS, which complicates portability to the web. It is possible to hack it together using something like require.js and a custom auto-updater, but CEF is such a straightforward platform that the additional pieces to build resin amount to less code, fewer moving pieces, and therefore easier support.
+node-webkit and related frameworks are great for using web standards for desktop applications. But node-webkit app design encourages server-like code to be written in Node.JS, which complicates portability to the web. It would be possible to hack a SAP application together using something like require.js and a custom auto-updater, but CEF is such a straightforward platform that the additional pieces to build resin amount to less code, fewer moving pieces, and therefore easier support.
 
 Why not just use PhoneGap/Cordova?
 ----------------------------------
