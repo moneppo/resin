@@ -31,7 +31,7 @@ Making An App
 Once you have a built version of Resin, making work as your custom app is just two steps:
 
 1. Rename the package (TODO)
-2. Include a package.json file (TODO)
+2. Set the link in the plist (TODO)
 
 I am working on a quick script that does this automatically, given the name of the app and the url to it. This could be run as a CGI script to dynamically create a link to download the app on a website. I may even set up a service for this.
 
