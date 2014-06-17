@@ -85,6 +85,7 @@
 		968E284F194BA01F003EEAD6 /* process_helper_mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 968E284E194BA01F003EEAD6 /* process_helper_mac.cpp */; };
 		968E2854194BA210003EEAD6 /* Resin Helper.app in Copy to $(BUILT_PRODUCTS_DIR)/Resin.app/Contents/Frameworks */ = {isa = PBXBuildFile; fileRef = 968E2853194BA210003EEAD6 /* Resin Helper.app */; };
 		968E285C194BA4FD003EEAD6 /* libplugin_carbon_interpose.dylib in Copy to $(BUILT_PRODUCTS_DIR)/Resin.app/Contents/Frameworks */ = {isa = PBXBuildFile; fileRef = 968E285B194BA4FD003EEAD6 /* libplugin_carbon_interpose.dylib */; };
+		96E2312A1950B9FC00F74BD7 /* notes in Resources */ = {isa = PBXBuildFile; fileRef = 96E231291950B9FC00F74BD7 /* notes */; };
 		9AD19FD370CA7AAE24905E4D /* stream_reader_ctocpp.cc in Sources */ = {isa = PBXBuildFile; fileRef = CC3FB3FFA7D96E159DD8B0A4 /* stream_reader_ctocpp.cc */; };
 		9BB9807F3084D7D7A7489DD2 /* life_span_handler_cpptoc.cc in Sources */ = {isa = PBXBuildFile; fileRef = 798AC59ED3B6E8BA5E441F83 /* life_span_handler_cpptoc.cc */; };
 		9D2A4770AF7BFAAB396C5927 /* web_plugin_info_visitor_cpptoc.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6571FF6B3DC881B288DC580A /* web_plugin_info_visitor_cpptoc.cc */; };
@@ -389,6 +390,7 @@
 		968E2855194BA2C7003EEAD6 /* libplugin_carbon_interpose.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libplugin_carbon_interpose.dylib; path = Release/libplugin_carbon_interpose.dylib; sourceTree = "<group>"; };
 		968E2857194BA301003EEAD6 /* libplugin_carbon_interpose.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libplugin_carbon_interpose.dylib; path = Release/libplugin_carbon_interpose.dylib; sourceTree = "<group>"; };
 		968E285B194BA4FD003EEAD6 /* libplugin_carbon_interpose.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libplugin_carbon_interpose.dylib; path = Release/libplugin_carbon_interpose.dylib; sourceTree = "<group>"; };
+		96E231291950B9FC00F74BD7 /* notes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = notes; sourceTree = "<group>"; };
 		973DD2E13C471245F05F222F /* cef_url_capi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cef_url_capi.h; sourceTree = "<group>"; };
 		977E73AA359B0405D341D37B /* cef_build.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cef_build.h; sourceTree = "<group>"; };
 		9836E0465BDF7400DF25785F /* cookie_visitor_cpptoc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cookie_visitor_cpptoc.h; sourceTree = "<group>"; };
@@ -694,6 +696,7 @@
 				9657A577194B929F001C1FFE /* simple_handler_mac.mm */,
 				9657A578194B929F001C1FFE /* simple_handler.cpp */,
 				9657A579194B929F001C1FFE /* simple_handler.h */,
+				96E231291950B9FC00F74BD7 /* notes */,
 				9657A57A194B929F001C1FFE /* util.h */,
 				B78BCF5460D294C8F4D7464A /* mac */,
 			);
@@ -1118,6 +1121,7 @@
 			files = (
 				9657A572194B926E001C1FFE /* helper-Info.plist in Resources */,
 				9657A571194B926E001C1FFE /* MainMenu.xib in Resources */,
+				96E2312A1950B9FC00F74BD7 /* notes in Resources */,
 				9657A573194B926E001C1FFE /* resin.icns in Resources */,
 				9657A570194B926E001C1FFE /* InfoPlist.strings in Resources */,
 			);

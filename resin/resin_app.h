@@ -10,7 +10,7 @@
 class ResinApp : public CefApp,
 public CefBrowserProcessHandler {
 public:
-    ResinApp();
+    ResinApp(std::string path = "");
     
     // CefApp methods:
     virtual CefRefPtr<CefBrowserProcessHandler> GetBrowserProcessHandler()
@@ -20,6 +20,7 @@ public:
     virtual void OnContextInitialized() OVERRIDE;
 
 private:
+    std::string m_path;
 
 // Include the default reference counting implementation.
 IMPLEMENT_REFCOUNTING(ResinApp);

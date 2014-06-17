@@ -118,14 +118,23 @@ int main(int argc, char* argv[]) {
     
     CFBundleRef mainBundle = CFBundleGetMainBundle();
     CFURLRef resourcesURL = CFBundleCopyResourcesDirectoryURL(mainBundle);
+    
     char path[PATH_MAX];
     CFURLGetFileSystemRepresentation(resourcesURL, TRUE, (UInt8 *)path, PATH_MAX);
     
     string appCachePath = string(path) + "/app_cache";
+    CFDictionaryRef plist = CFBundleGetInfoDictionary (mainBundle);
+    CFStringRef str = (CFStringRef) CFDictionaryGetValue (plist, CFSTR("HomePath"));
+    string homePath = CFStringGetCStringPtr(str, CFStringGetSystemEncoding());
+    
+    //CFRelease(plist);
+    //CFRelease(resourcesURL);
+    //CFRelease(mainBundle);
+    
     
     // SimpleApp implements application-level callbacks. It will create the first
     // browser instance in OnContextInitialized() after CEF has initialized.
-    CefRefPtr<ResinApp> app(new ResinApp());
+    CefRefPtr<ResinApp> app(new ResinApp(homePath));
     
     // Initialize the AutoRelease pool.
     NSAutoreleasePool* autopool = [[NSAutoreleasePool alloc] init];
