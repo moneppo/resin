@@ -28,12 +28,13 @@ For other platforms, stay tuned.
 Making An App
 -------------
 
-Once you have a built version of Resin, making work as your custom app is just two steps:
+Once you have a built version of Resin, making work as your custom app is just three easy steps:
 
-1. Rename the package (TODO)
-2. Set the link in the plist (TODO)
+1. Rename the package: Rename the package from Resin.app to <your app name>.app, and modify the Info.plist CFBundleName property to be your app name. You may also want to consider modifying CFBundleIdentifier.
+2. Set the link in the plist: Change the HomePath property in Info.plist to point to the website for your app.
+3. Change your icons: Change the resin.icns file to be your icon of choice. Make your PNG a icns file real fast with [this tool](http://iconverticons.com/online/).
 
-I am working on a quick script that does this automatically, given the name of the app and the url to it. This could be run as a CGI script to dynamically create a link to download the app on a website. I may even set up a service for this.
+I am working on a quick script that does this automatically, given the name of the app, a png, and the url to it. This could be run as a CGI script to dynamically create a link to download the app on a website. I may even set up a service for this.
 
 Why not just use a browser?
 ---------------------------
