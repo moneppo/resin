@@ -54,6 +54,6 @@ For the same reasons PhoneGap isn't a good solution for SAP. Widgets are standal
 
 Other SAP Projects
 ------------------
- * Syrup - SAP boilerplate using PouchDB and some other frameworks (Coming Soon).
+ * [Syrup](https://github.com/moneppo/Syrup) - SAP boilerplate using PouchDB and some other frameworks.
  * Amber - Android app for running SAP apps as if they were native apps (Coming Soon).
 
