@@ -15,7 +15,7 @@ What is Resin?
 
 Resin is the PC client for running SAP apps. Rather than a single, dedicated web browser, Resin aims to be a tool for making standalone apps out of web app assets for clean integration into the host OS. 
 
-Resin is a simple extension of the Chromium Embedded Framework. By simply changing the name of the application and including a manifest file that points Resin to your SAP-architected web app, Resin suddenly transforms into a fully-fledged, installable version of your app. And whenever the user is connected to the web, this app will automatically and transparently update itself to the latest version, simply by redownloading assets where the HTTP cache-control headers expire, just like a web browser. But unlike a web browser, the user can be completely disconnected from the web to use the app.
+Resin is a simple extension of the Chromium Embedded Framework. By leveraging the [HTML5 Application Cache](http://www.html5rocks.com/en/tutorials/appcache/beginner/), Resin points to your SAP-architected web app and suddenly transforms it into a fully-fledged, installable version of your app. And whenever the user is connected to the web, this app will automatically and transparently update itself to the latest version, simply by adhering to the rules of the HTML5 Application Cache. 
 
 Building
 --------
@@ -34,6 +34,10 @@ Once you have a built version of Resin, making work as your custom app is just t
 2. Include a package.json file (TODO)
 
 I am working on a quick script that does this automatically, given the name of the app and the url to it. This could be run as a CGI script to dynamically create a link to download the app on a website. I may even set up a service for this.
+
+Why not just use a browser?
+---------------------------
+By all means, use a browser if you want! [Most major browsers support the application cache](http://caniuse.com/offline-apps). Resin is for making the app work well within the native OS, rather than just a browser tab.
 
 Why not just use node-webkit?
 -----------------------------
