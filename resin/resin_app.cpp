@@ -10,14 +10,11 @@
 #include "resin/util.h"
 #include "include/cef_browser.h"
 #include "include/cef_command_line.h"
-#include "resin_scheme.h"
 #include <string>
 
 using namespace std;
 
-ResinApp::ResinApp(string basePath) {
-    m_basePath = basePath;
-}
+ResinApp::ResinApp() {}
 
 void ResinApp::OnContextInitialized() {
   REQUIRE_UI_THREAD();
@@ -37,11 +34,6 @@ void ResinApp::OnContextInitialized() {
   // Specify CEF browser settings here.
   CefBrowserSettings browser_settings;
     
-    CefRefPtr<CefSchemeHandlerFactory> factory =
-        new ResinSchemeHandlerFactory(m_basePath);
-    
-    CefRegisterSchemeHandlerFactory("resin", "", factory);
-
   string url;
 
   // Check if a "--url=" value was provided via the command-line. If so, use
@@ -50,7 +42,7 @@ void ResinApp::OnContextInitialized() {
       CefCommandLine::GetGlobalCommandLine();
   url = command_line->GetSwitchValue("url");
   if (url.empty())
-    url = "resin://index.html";
+    url = " http://html5demos.com/offlineapp";
 
   // Create the first browser window.
   CefBrowserHost::CreateBrowser(window_info, handler.get(), url,

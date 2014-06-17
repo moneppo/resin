@@ -77,10 +77,10 @@
 		9657A571194B926E001C1FFE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9657A56C194B926E001C1FFE /* MainMenu.xib */; };
 		9657A572194B926E001C1FFE /* helper-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9657A56E194B926E001C1FFE /* helper-Info.plist */; };
 		9657A573194B926E001C1FFE /* resin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9657A56F194B926E001C1FFE /* resin.icns */; };
-		9657A57C194B929F001C1FFE /* simple_app.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9657A575194B929F001C1FFE /* simple_app.cpp */; };
+		9657A57C194B929F001C1FFE /* resin_app.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9657A575194B929F001C1FFE /* resin_app.cpp */; };
 		9657A57D194B929F001C1FFE /* simple_handler_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9657A577194B929F001C1FFE /* simple_handler_mac.mm */; };
 		9657A57E194B929F001C1FFE /* simple_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9657A578194B929F001C1FFE /* simple_handler.cpp */; };
-		9657A580194B92B8001C1FFE /* cefsimple_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9657A57F194B92B8001C1FFE /* cefsimple_mac.mm */; };
+		9657A580194B92B8001C1FFE /* resin_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9657A57F194B92B8001C1FFE /* resin_mac.mm */; };
 		968E284C194B99C6003EEAD6 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 968E284B194B99C6003EEAD6 /* Chromium Embedded Framework.framework */; };
 		968E284F194BA01F003EEAD6 /* process_helper_mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 968E284E194BA01F003EEAD6 /* process_helper_mac.cpp */; };
 		968E2854194BA210003EEAD6 /* Resin Helper.app in Copy to $(BUILT_PRODUCTS_DIR)/Resin.app/Contents/Frameworks */ = {isa = PBXBuildFile; fileRef = 968E2853194BA210003EEAD6 /* Resin Helper.app */; };
@@ -375,13 +375,13 @@
 		9657A56D194B926E001C1FFE /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = MainMenu.xib; sourceTree = "<group>"; };
 		9657A56E194B926E001C1FFE /* helper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "helper-Info.plist"; path = "resin/mac/helper-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9657A56F194B926E001C1FFE /* resin.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = resin.icns; path = resin/mac/resin.icns; sourceTree = SOURCE_ROOT; };
-		9657A575194B929F001C1FFE /* simple_app.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = simple_app.cpp; path = resin/simple_app.cpp; sourceTree = SOURCE_ROOT; };
-		9657A576194B929F001C1FFE /* simple_app.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = simple_app.h; path = resin/simple_app.h; sourceTree = SOURCE_ROOT; };
+		9657A575194B929F001C1FFE /* resin_app.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = resin_app.cpp; path = resin/resin_app.cpp; sourceTree = SOURCE_ROOT; };
+		9657A576194B929F001C1FFE /* resin_app.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = resin_app.h; path = resin/resin_app.h; sourceTree = SOURCE_ROOT; };
 		9657A577194B929F001C1FFE /* simple_handler_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = simple_handler_mac.mm; path = resin/simple_handler_mac.mm; sourceTree = SOURCE_ROOT; };
 		9657A578194B929F001C1FFE /* simple_handler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = simple_handler.cpp; path = resin/simple_handler.cpp; sourceTree = SOURCE_ROOT; };
 		9657A579194B929F001C1FFE /* simple_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = simple_handler.h; path = resin/simple_handler.h; sourceTree = SOURCE_ROOT; };
 		9657A57A194B929F001C1FFE /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = util.h; path = resin/util.h; sourceTree = SOURCE_ROOT; };
-		9657A57F194B92B8001C1FFE /* cefsimple_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = cefsimple_mac.mm; path = resin/cefsimple_mac.mm; sourceTree = SOURCE_ROOT; };
+		9657A57F194B92B8001C1FFE /* resin_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = resin_mac.mm; path = resin/resin_mac.mm; sourceTree = SOURCE_ROOT; };
 		968E284B194B99C6003EEAD6 /* Chromium Embedded Framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Chromium Embedded Framework.framework"; path = "Release/Chromium Embedded Framework.framework"; sourceTree = "<group>"; };
 		968E284E194BA01F003EEAD6 /* process_helper_mac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = process_helper_mac.cpp; path = resin/process_helper_mac.cpp; sourceTree = SOURCE_ROOT; };
 		968E2851194BA200003EEAD6 /* libcef_dll_wrapper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcef_dll_wrapper.a; path = xcodebuild/Debug/libcef_dll_wrapper.a; sourceTree = "<group>"; };
@@ -688,9 +688,9 @@
 			isa = PBXGroup;
 			children = (
 				968E284E194BA01F003EEAD6 /* process_helper_mac.cpp */,
-				9657A57F194B92B8001C1FFE /* cefsimple_mac.mm */,
-				9657A575194B929F001C1FFE /* simple_app.cpp */,
-				9657A576194B929F001C1FFE /* simple_app.h */,
+				9657A57F194B92B8001C1FFE /* resin_mac.mm */,
+				9657A575194B929F001C1FFE /* resin_app.cpp */,
+				9657A576194B929F001C1FFE /* resin_app.h */,
 				9657A577194B929F001C1FFE /* simple_handler_mac.mm */,
 				9657A578194B929F001C1FFE /* simple_handler.cpp */,
 				9657A579194B929F001C1FFE /* simple_handler.h */,
@@ -1225,10 +1225,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9657A580194B92B8001C1FFE /* cefsimple_mac.mm in Sources */,
+				9657A580194B92B8001C1FFE /* resin_mac.mm in Sources */,
 				9657A57D194B929F001C1FFE /* simple_handler_mac.mm in Sources */,
 				9657A57E194B929F001C1FFE /* simple_handler.cpp in Sources */,
-				9657A57C194B929F001C1FFE /* simple_app.cpp in Sources */,
+				9657A57C194B929F001C1FFE /* resin_app.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

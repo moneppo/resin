@@ -11,11 +11,11 @@
 
 void SimpleHandler::OnTitleChange(CefRefPtr<CefBrowser> browser,
                                   const CefString& title) {
-  REQUIRE_UI_THREAD();
-
-  NSView* view = (NSView*)browser->GetHost()->GetWindowHandle();
-  NSWindow* window = [view window];
-  std::string titleStr(title);
-  NSString* str = [NSString stringWithUTF8String:titleStr.c_str()];
-  [window setTitle:str];
+    REQUIRE_UI_THREAD();
+    
+    NSView* view = (NSView*)browser->GetHost()->GetWindowHandle();
+    NSWindow* window = [view window];
+    std::string titleStr(title);
+    NSString* str = [NSString stringWithUTF8String:titleStr.c_str()];
+    [window setTitle:str];
 }
