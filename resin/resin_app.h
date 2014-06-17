@@ -7,10 +7,10 @@
 
 #include "include/cef_app.h"
 
-class SimpleApp : public CefApp,
-                  public CefBrowserProcessHandler {
+class ResinApp : public CefApp,
+                 public CefBrowserProcessHandler {
  public:
-  SimpleApp();
+                     ResinApp(std::string basePath);
 
   // CefApp methods:
   virtual CefRefPtr<CefBrowserProcessHandler> GetBrowserProcessHandler()
@@ -20,8 +20,10 @@ class SimpleApp : public CefApp,
   virtual void OnContextInitialized() OVERRIDE;
 
  private:
+
+std::string m_basePath;
   // Include the default reference counting implementation.
-  IMPLEMENT_REFCOUNTING(SimpleApp);
+  IMPLEMENT_REFCOUNTING(ResinApp);
 };
 
 #endif  // CEF_TESTS_CEFSIMPLE_SIMPLE_APP_H_

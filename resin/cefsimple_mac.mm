@@ -5,10 +5,15 @@
 
 #import <Cocoa/Cocoa.h>
 
-#include "resin/simple_app.h"
+#include <string>
+#include <iostream>
+
+#include "resin/resin_app.h"
 #include "resin/simple_handler.h"
 #include "resin/util.h"
 #include "include/cef_application_mac.h"
+
+using namespace std;
 
 // Receives notifications from the application.
 @interface SimpleAppDelegate : NSObject
@@ -108,12 +113,19 @@
 
 // Entry point function for the browser process.
 int main(int argc, char* argv[]) {
-  // Provide CEF with command-line arguments.
-  CefMainArgs main_args(argc, argv);
-
+    // Provide CEF with command-line arguments.
+    CefMainArgs main_args(argc, argv);
+    
+    CFBundleRef mainBundle = CFBundleGetMainBundle();
+    CFURLRef resourcesURL = CFBundleCopyResourcesDirectoryURL(mainBundle);
+    char path[PATH_MAX];
+    CFURLGetFileSystemRepresentation(resourcesURL, TRUE, (UInt8 *)path, PATH_MAX);
+    string basePath = path;
+    cout << "base path: " << basePath << endl;
+    
   // SimpleApp implements application-level callbacks. It will create the first
   // browser instance in OnContextInitialized() after CEF has initialized.
-  CefRefPtr<SimpleApp> app(new SimpleApp);
+  CefRefPtr<ResinApp> app(new ResinApp(basePath));
 
   // Initialize the AutoRelease pool.
   NSAutoreleasePool* autopool = [[NSAutoreleasePool alloc] init];

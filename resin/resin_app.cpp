@@ -2,7 +2,7 @@
 // reserved. Use of this source code is governed by a BSD-style license that
 // can be found in the LICENSE file.
 
-#include "resin/simple_app.h"
+#include "resin/resin_app.h"
 
 #include <string>
 
@@ -10,11 +10,16 @@
 #include "resin/util.h"
 #include "include/cef_browser.h"
 #include "include/cef_command_line.h"
+#include "resin_scheme.h"
+#include <string>
 
-SimpleApp::SimpleApp() {
+using namespace std;
+
+ResinApp::ResinApp(string basePath) {
+    m_basePath = basePath;
 }
 
-void SimpleApp::OnContextInitialized() {
+void ResinApp::OnContextInitialized() {
   REQUIRE_UI_THREAD();
 
   // Information used when creating the native window.
@@ -31,8 +36,13 @@ void SimpleApp::OnContextInitialized() {
 
   // Specify CEF browser settings here.
   CefBrowserSettings browser_settings;
+    
+    CefRefPtr<CefSchemeHandlerFactory> factory =
+        new ResinSchemeHandlerFactory(m_basePath);
+    
+    CefRegisterSchemeHandlerFactory("resin", "", factory);
 
-  std::string url;
+  string url;
 
   // Check if a "--url=" value was provided via the command-line. If so, use
   // that instead of the default URL.
@@ -40,7 +50,7 @@ void SimpleApp::OnContextInitialized() {
       CefCommandLine::GetGlobalCommandLine();
   url = command_line->GetSwitchValue("url");
   if (url.empty())
-    url = "http://www.google.com";
+    url = "resin://index.html";
 
   // Create the first browser window.
   CefBrowserHost::CreateBrowser(window_info, handler.get(), url,
