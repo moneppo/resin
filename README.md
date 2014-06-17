@@ -20,7 +20,7 @@ Resin is a simple extension of the Chromium Embedded Framework. By simply changi
 Building
 --------
 
-You first need to download the CEF binaries for your platform, available at http://cefbuilds.com/. Decompress this archive and clone this repo into the resulting directory. 
+You first need to download the CEF binaries for your platform, available at http://cefbuilds.com/. Clone this repo, and decompress the archive contents into the project directory. 
 
 For Mac OSX, the XCode project is configured to build from there.
 For other platforms, stay tuned.
