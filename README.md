@@ -8,6 +8,8 @@ What is SAP?
 
 Software As a Product is the idea that by structuring a web app for offline experiences first, you can create a single app that seamlessly works as a local (double-click installed) application, a website, or an app, with transparent, automatic updates. Essentially you get all the benefits the web promises: multi-platform support, transparent updates, open standards, etc. in every environment you want to deploy to. 
 
+SAP builds upon the ideas around Offline First developed by the amazing [Hoodie team](http://www.hood.ie), and is meant to extend the reach of Hoodie-based apps with the addition of the [appcache plugin for hoodie](https://github.com/gr2m/hoodie-plugin-appcache). The dream is a boilerplate project for Offline First apps that lets you build one app and one service that will work as a web page, resin-based local app, iOS-pinnable web app, and Android app, all in one.
+
 The name is a play on the idea of Software as a Service (SaaS) where it is assumed that when one is always online and always connected, there is little to no need for local storage. SAP assumes the opposite - connectivity is rarely consistent, especially on mobile devices - and therefore changing the architecture of apps to assume the disconnected state first provides a better user experience, while providing most of the benefits of SaaS.
 
 What is Resin?
@@ -52,8 +54,8 @@ Why not comply with the W3C "Widget" standard?
 ----------------------------------------------
 For the same reasons PhoneGap isn't a good solution for SAP. Widgets are standalone apps with a pre-defined manifest.
 
-Other SAP Projects
+Related Projects
 ------------------
- * [Syrup](https://github.com/moneppo/Syrup) - SAP boilerplate using PouchDB and some other frameworks.
+ * Hoodie - http://www.hood.ie
+ * Hoodie AppCache Plugin - https://github.com/gr2m/hoodie-plugin-appcache
  * Amber - Android app for running SAP apps as if they were native apps (Coming Soon).
-
