@@ -8,6 +8,8 @@ What is SAP?
 
 Software As a Product is the idea that by structuring a web app for offline experiences first, you can create a single app that seamlessly works as a local (double-click installed) application, a website, or an app, with transparent, automatic updates. Essentially you get all the benefits the web promises: multi-platform support, transparent updates, open standards, etc. in every environment you want to deploy to. 
 
+SAP builds upon the ideas around Offline First developed by the amazing [Hoodie team](http://www.hood.ie), and is meant to extend the reach of Hoodie-based apps with the addition of the [appcache plugin for hoodie](https://github.com/gr2m/hoodie-plugin-appcache). The dream is a boilerplate project for Offline First apps that lets you build one app and one service that will work as a web page, resin-based local app, iOS-pinnable web app, and Android app, all in one.
+
 The name is a play on the idea of Software as a Service (SaaS) where it is assumed that when one is always online and always connected, there is little to no need for local storage. SAP assumes the opposite - connectivity is rarely consistent, especially on mobile devices - and therefore changing the architecture of apps to assume the disconnected state first provides a better user experience, while providing most of the benefits of SaaS.
 
 What is Resin?
@@ -28,12 +30,13 @@ For other platforms, stay tuned.
 Making An App
 -------------
 
-Once you have a built version of Resin, making work as your custom app is just two steps:
+Once you have a built version of Resin, making work as your custom app is just three easy steps:
 
-1. Rename the package (TODO)
-2. Set the link in the plist (TODO)
+1. Rename the package: Rename the package from Resin.app to <your app name>.app, and modify the Info.plist CFBundleName property to be your app name. You may also want to consider modifying CFBundleIdentifier.
+2. Set the link in the plist: Change the HomePath property in Info.plist to point to the website for your app.
+3. Change your icons: Change the resin.icns file to be your icon of choice. Make your PNG a icns file real fast with [this tool](http://iconverticons.com/online/).
 
-I am working on a quick script that does this automatically, given the name of the app and the url to it. This could be run as a CGI script to dynamically create a link to download the app on a website. I may even set up a service for this.
+I am working on a quick script that does this automatically, given the name of the app, a png, and the url to it. This could be run as a CGI script to dynamically create a link to download the app on a website. I may even set up a service for this.
 
 Why not just use a browser?
 ---------------------------
@@ -51,8 +54,8 @@ Why not comply with the W3C "Widget" standard?
 ----------------------------------------------
 For the same reasons PhoneGap isn't a good solution for SAP. Widgets are standalone apps with a pre-defined manifest.
 
-Other SAP Projects
+Related Projects
 ------------------
- * Syrup - SAP boilerplate using PouchDB and some other frameworks (Coming Soon).
+ * Hoodie - http://www.hood.ie
+ * Hoodie AppCache Plugin - https://github.com/gr2m/hoodie-plugin-appcache
  * Amber - Android app for running SAP apps as if they were native apps (Coming Soon).
-
