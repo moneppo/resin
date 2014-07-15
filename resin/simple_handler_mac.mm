@@ -19,3 +19,16 @@ void SimpleHandler::OnTitleChange(CefRefPtr<CefBrowser> browser,
     NSString* str = [NSString stringWithUTF8String:titleStr.c_str()];
     [window setTitle:str];
 }
+
+void SimpleHandler::OnAfterCreated(CefRefPtr<CefBrowser> browser) {
+ REQUIRE_UI_THREAD();
+ 
+ // Add to the list of existing browsers.
+ browser_list_.push_back(browser);
+ 
+ NSView* view = (NSView*)browser->GetHost()->GetWindowHandle();
+ NSWindow* window = [view window];
+
+ [window setCollectionBehavior: NSWindowCollectionBehaviorFullScreenPrimary];
+}
+

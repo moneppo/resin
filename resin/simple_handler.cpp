@@ -6,6 +6,7 @@
 
 #include <sstream>
 #include <string>
+#include <iostream>
 
 #include "resin/util.h"
 #include "include/cef_app.h"
@@ -32,12 +33,13 @@ SimpleHandler* SimpleHandler::GetInstance() {
     return g_instance;
 }
 
-void SimpleHandler::OnAfterCreated(CefRefPtr<CefBrowser> browser) {
+/*void SimpleHandler::OnAfterCreated(CefRefPtr<CefBrowser> browser) {
     REQUIRE_UI_THREAD();
     
     // Add to the list of existing browsers.
     browser_list_.push_back(browser);
-}
+    
+}*/
 
 bool SimpleHandler::DoClose(CefRefPtr<CefBrowser> browser) {
     REQUIRE_UI_THREAD();

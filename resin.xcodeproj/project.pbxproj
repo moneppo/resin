@@ -1466,7 +1466,7 @@
 					Framework.framework,
 					"$(PROJECT_DIR)/Release",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = "-fno-strict-aliasing";
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
@@ -1565,7 +1565,7 @@
 					Framework.framework,
 					"$(PROJECT_DIR)/Release",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = (
 					"-fno-strict-aliasing",
 					"-fstack-protector-all",

@@ -30,12 +30,12 @@ void ResinApp::OnContextInitialized() {
     window_info.SetAsPopup(NULL, "resin");
 #endif
     
+    
     // SimpleHandler implements browser-level callbacks.
     CefRefPtr<SimpleHandler> handler(new SimpleHandler());
     
     // Specify CEF browser settings here.
     CefBrowserSettings browser_settings;
-    
     string url;
     
     // Check if a "--url=" value was provided via the command-line. If so, use

@@ -91,7 +91,6 @@ using namespace std;
 
 // Create the application on the UI thread.
 - (void)createApplication:(id)object {
-    [NSApplication sharedApplication];
     [NSBundle loadNibNamed:@"MainMenu" owner:NSApp];
     
     // Set the delegate for application events.
@@ -154,6 +153,12 @@ int main(int argc, char* argv[]) {
     [delegate performSelectorOnMainThread:@selector(createApplication:)
                                withObject:nil
                             waitUntilDone:NO];
+    
+   // NSWindow* nswindow = [[NSApplication sharedApplication] mainWindow];
+   // [nswindow setCollectionBehavior: NSWindowCollectionBehaviorFullScreenPrimary];
+    
+    //[nswindow setCollectionBehavior:NSWindowCollectionBehaviorFullScreenPrimary];
+    //NSFullScreenWindowMask
     
     // Run the CEF message loop. This will block until CefQuitMessageLoop() is
     // called.
